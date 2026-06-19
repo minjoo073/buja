@@ -1,3 +1,14 @@
+// Header scroll-state toggle: semi-transparent blur → solid white after 50px
+(function initHeaderScroll() {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+  const onScroll = () => {
+    header.toggleAttribute('data-scrolled', window.scrollY > 50);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // apply immediately on page load
+})();
+
 // Sliding active bar in the main nav (URL-driven active state)
 (function initNavBar() {
   const menu = document.querySelector('.nav__menu');

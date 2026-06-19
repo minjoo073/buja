@@ -4,9 +4,11 @@
   --red: #e53935;
   --red-dark: #c62828;
   --blue: #1e88e5;
+  --gold-soft: #e8d9a3;
   --gray-50: #fafbfc;
   --gray-100: #eef0f4;
   --gray-200: #e1e4ea;
+  --gray-400: #aab0bc;
   --gray-500: #7a8190;
   --gray-700: #3d4452;
   --text: #1a1f2e;
@@ -552,7 +554,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* ========== Fleet ========== */
 .fleet {
   display: grid;
-  grid-template-columns: 1fr 1fr 1.2fr 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
   gap: 1.25rem;
   align-items: stretch;
 }
@@ -573,8 +575,8 @@ ul { list-style: none; margin: 0; padding: 0; }
   top: 1rem;
   left: 1rem;
   padding: 0.25rem 0.75rem;
-  border: 1px solid var(--red);
-  color: var(--red);
+  border: 1px solid var(--gray-200);
+  color: var(--navy);
   background: #fff;
   border-radius: 999px;
   font-size: 0.7rem;
@@ -619,10 +621,20 @@ ul { list-style: none; margin: 0; padding: 0; }
   white-space: nowrap;
 }
 .vehicle__specs img {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
   filter: brightness(0) opacity(0.55);
+}
+.vehicle__specs svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: var(--gray-400);
+}
+.vehicle--featured .vehicle__specs svg {
+  color: var(--gold-soft);
+  opacity: 0.8;
 }
 .vehicle__btn {
   margin-top: auto;
@@ -653,31 +665,32 @@ ul { list-style: none; margin: 0; padding: 0; }
   transform: translateX(4px);
 }
 
-/* Featured (dark premium) */
+/* Featured (navy premium) */
 .vehicle--featured {
-  background: linear-gradient(180deg, #2d2d35 0%, #14141a 100%);
+  background: var(--navy);
   color: #fff;
 }
 .vehicle__tag--featured {
-  background: #fbbf24;
-  border-color: #fbbf24;
-  color: #1a1a1a;
+  background: transparent;
+  border-color: var(--gold-soft);
+  color: var(--gold-soft);
 }
-.vehicle--featured .vehicle__name { color: #fbbf24; }
-.vehicle--featured .vehicle__desc { color: #cbd5e1; }
-.vehicle--featured .vehicle__specs li { color: #fbbf24; }
+.vehicle--featured .vehicle__name { color: var(--gold-soft); }
+.vehicle--featured .vehicle__desc { color: rgba(255, 255, 255, 0.65); }
+.vehicle--featured .vehicle__specs li { color: var(--gold-soft); }
 .vehicle--featured .vehicle__specs img {
-  filter: none;
+  filter: brightness(0) invert(1) opacity(0.7);
 }
 .vehicle__btn--featured {
-  background: #fbbf24;
-  border-color: #fbbf24;
-  color: #1a1a1a;
+  background: transparent;
+  border-color: var(--gold-soft);
+  color: var(--gold-soft);
   font-weight: 700;
 }
 .vehicle__btn--featured:hover {
-  background: #f59e0b;
-  border-color: #f59e0b;
+  background: var(--gold-soft);
+  border-color: var(--gold-soft);
+  color: var(--navy);
 }
 
 /* ========== Real story marquee (vertical step slide) ========== */

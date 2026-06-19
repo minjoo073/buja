@@ -171,12 +171,12 @@ ul { list-style: none; margin: 0; padding: 0; }
 .section {
   display: flex;
   flex-direction: column;
-  padding: 5rem 0;
+  padding: 150px 0;
 }
 .section--light { background: var(--gray-50); }
 .section--compact {
   min-height: auto;
-  padding: 5rem 0 3rem;
+  padding: 150px 0;
 }
 
 /* ========== Hero ========== */
@@ -230,7 +230,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.85);
   margin: 0 0 2rem;
-  max-width: 32ch;
+  max-width: 48ch;
 }
 .hero .btn--primary {
   font-size: 1.125rem;
@@ -427,7 +427,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .phone {
   position: relative;
   z-index: 2;
-  width: 300px;
+  width: 340px;
   flex-shrink: 0;
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
 }
@@ -445,7 +445,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   left: 4.2%;
   right: 4.2%;
   bottom: 2.5%;
-  padding: 88px 28px 40px;
+  padding: 70px 22px 28px;
   overflow: hidden;
   z-index: 1;
   display: flex;
@@ -506,17 +506,17 @@ ul { list-style: none; margin: 0; padding: 0; }
   border-radius: 999px;
 }
 .phone__desc {
-  font-size: 1rem;
+  font-size: 0.9375rem;
   color: var(--gray-500);
-  line-height: 1.6;
-  margin: 0 0 1.75rem;
+  line-height: 1.55;
+  margin: 0 0 1.25rem;
   text-align: center;
 }
 .phone__details {
   background: #fff;
   border-top: 1px solid var(--gray-100);
   border-radius: 0;
-  padding: 1.25rem 1.125rem 0.75rem;
+  padding: 1.25rem 0.5rem 1.25rem;
 }
 .phone__details-title {
   font-size: 0.95rem;
@@ -526,24 +526,29 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .phone__list li {
   display: grid;
-  grid-template-columns: 20px 58px 1fr;
+  grid-template-columns: 18px 86px 1fr;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.55rem 0;
-  font-size: 1rem;
+  padding: 0.85rem 0;
+  font-size: 0.9375rem;
   border-top: 1px solid var(--gray-100);
 }
 .phone__list .value {
   word-break: keep-all;
   line-height: 1.4;
+  font-size: 0.9375rem;
 }
 .phone__list li:first-child { border-top: none; padding-top: 0.25rem; }
 .phone__list svg {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   color: var(--gray-500);
 }
-.phone__list .label { color: var(--gray-500); }
+.phone__list .label {
+  color: var(--gray-500);
+  font-size: 0.8125rem;
+  white-space: nowrap;
+}
 .phone__list .value { color: var(--navy); font-weight: 600; }
 
 .phone__dots {
@@ -710,7 +715,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 #review {
   overflow: hidden;
   background: var(--gray-50);
-  padding: 3rem 0;
+  padding: 150px 0;
 }
 #review .container {
   display: flex;

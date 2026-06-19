@@ -206,7 +206,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .hero__eyebrow {
   letter-spacing: 0.2em;
   font-size: 1rem;
-  color: #ff8a80;
+  color: rgba(255, 255, 255, 0.7);
   margin: 0 0 1.25rem;
   font-weight: 600;
 }
@@ -303,11 +303,11 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .feature__num {
   display: block;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  color: var(--red);
+  color: var(--gray-500);
   margin-bottom: 0.35rem;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
 }
 .feature__title {
   font-size: 1.125rem;
@@ -336,7 +336,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   content: "·";
   position: absolute;
   left: 0;
-  color: var(--red);
+  color: var(--gray-400);
   font-weight: 700;
 }
 
@@ -743,7 +743,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   margin-bottom: 1rem;
 }
 .story-card__stars {
-  color: var(--red);
+  color: #f5a623;
   letter-spacing: 2px;
   font-size: 0.95rem;
 }
@@ -806,13 +806,14 @@ ul { list-style: none; margin: 0; padding: 0; }
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  background: var(--red);
-  color: #fff;
-  padding: 0.55rem 1.35rem;
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid var(--gray-200);
+  padding: 0.5rem 1.25rem;
   border-radius: 999px;
   font-size: 0.85rem;
   font-weight: 600;
-  transition: background 0.15s ease;
+  transition: border-color 0.15s ease, color 0.15s ease;
 }
 .cta-card__btn::after {
   content: "→";
@@ -820,7 +821,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   line-height: 1;
   transition: transform 0.2s ease;
 }
-.cta-card:hover .cta-card__btn { background: var(--red-dark); }
+.cta-card:hover .cta-card__btn { border-color: var(--navy); color: var(--navy); }
 .cta-card:hover .cta-card__btn::after { transform: translateX(4px); }
 
 .cta-card__img {

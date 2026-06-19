@@ -893,21 +893,23 @@ ul { list-style: none; margin: 0; padding: 0; }
   gap: 0.5rem;
 }
 .site-footer__social a {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.08);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #cfd5e2;
-  font-size: 0.85rem;
-  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
   transition: background 0.15s ease, color 0.15s ease;
 }
 .site-footer__social a:hover {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.16);
   color: #fff;
+}
+.site-footer__social svg {
+  display: block;
+  flex-shrink: 0;
 }
 
 .site-footer__col h4 {
